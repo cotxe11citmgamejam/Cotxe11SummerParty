@@ -41,41 +41,47 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 new_rotation = new Vector3();
             new_rotation.y = transform.rotation.eulerAngles.y;
-            if (transform.rotation.eulerAngles.y > 0)
+            if (new_rotation.y > 90 + left_max_angle)
             {
-                new_rotation.y = new_rotation.y - angular_speed * Time.deltaTime;
-                new_rotation.Normalize();
-                //new_rotation.y = -new_rotation.y;
-                new_rotation *= -angular_speed;
-                transform.Rotate(new_rotation);
-            }
-            else if (transform.rotation.eulerAngles.y <= 0 && transform.rotation.eulerAngles.y > left_max_angle)
-            {
-                new_rotation.y = new_rotation.y + angular_speed * Time.deltaTime;
-                new_rotation.Normalize();
-                //new_rotation.y = -new_rotation.y;
-                new_rotation *= angular_speed;
-                transform.Rotate(0.0f, 360.0f - new_rotation.y, 0.0f);
+                if (transform.rotation.eulerAngles.y > 0)
+                {
+                    new_rotation.y = new_rotation.y - angular_speed * Time.deltaTime;
+                    new_rotation.Normalize();
+                    //new_rotation.y = -new_rotation.y;
+                    new_rotation *= -angular_speed;
+                    transform.Rotate(new_rotation);
+                }
+                else if (transform.rotation.eulerAngles.y <= 0 && transform.rotation.eulerAngles.y > left_max_angle)
+                {
+                    new_rotation.y = new_rotation.y + angular_speed * Time.deltaTime;
+                    new_rotation.Normalize();
+                    //new_rotation.y = -new_rotation.y;
+                    new_rotation *= angular_speed;
+                    transform.Rotate(0.0f, 360.0f - new_rotation.y, 0.0f);
+                }
             }
         }
         if (Input.GetKey(key_right))
         {
             Vector3 new_rotation = new Vector3();
             new_rotation.y = transform.rotation.eulerAngles.y;
-            //Vector3 new_rotation = transform.rotation.eulerAngles;
-            if ((transform.rotation.eulerAngles.y < right_max_angle && transform.rotation.eulerAngles.y >= 0.0f) || transform.rotation.eulerAngles.y > right_max_angle)
+            if (new_rotation.y < 90 + right_max_angle)
             {
-                new_rotation.y = new_rotation.y + angular_speed * Time.deltaTime;
-                new_rotation.Normalize();
-                new_rotation *= angular_speed;
-                transform.Rotate(new_rotation);
-            }
-            else if (transform.rotation.eulerAngles.y < 0.0f)
-            {
-                new_rotation.y = new_rotation.y - angular_speed * Time.deltaTime;
-                new_rotation.Normalize();
-                new_rotation *= -angular_speed;
-                transform.Rotate(new_rotation);
+                //Vector3 new_rotation = transform.rotation.eulerAngles;
+                if ((transform.rotation.eulerAngles.y < right_max_angle && transform.rotation.eulerAngles.y >= 0.0f) || transform.rotation.eulerAngles.y > right_max_angle)
+                {
+                    new_rotation.y = new_rotation.y + angular_speed * Time.deltaTime;
+                    new_rotation.Normalize();
+                    new_rotation *= angular_speed;
+                    transform.Rotate(new_rotation);
+                }
+                else if (transform.rotation.eulerAngles.y < 0.0f)
+                {
+                    new_rotation.y = new_rotation.y - angular_speed * Time.deltaTime;
+                    new_rotation.Normalize();
+                    new_rotation *= -angular_speed;
+                    transform.Rotate(new_rotation);
+                }
             }
         }
     }

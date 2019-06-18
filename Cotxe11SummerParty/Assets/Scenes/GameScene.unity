@@ -582,11 +582,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CircuitPiece
       objectReference: {fileID: 0}
-    - target: {fileID: 835383545914542120, guid: 1d2f23fadde74f64ba1f77ebcc9c6c86,
-        type: 3}
-      propertyPath: m_TagString
-      value: Circuit
-      objectReference: {fileID: 0}
     - target: {fileID: 5771935625779910769, guid: 1d2f23fadde74f64ba1f77ebcc9c6c86,
         type: 3}
       propertyPath: m_LocalPosition.x

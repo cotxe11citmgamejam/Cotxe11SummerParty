@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 835383545914542121}
   m_Layer: 0
   m_Name: CircuitPiece
-  m_TagString: Untagged
+  m_TagString: Circuit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -406,10 +406,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5771935625779910769}
     m_Modifications:
-    - target: {fileID: 100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
-      propertyPath: m_Name
-      value: roca3
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.559999
@@ -466,6 +462,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 176.06993
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
+      propertyPath: m_Name
+      value: roca3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3332012f454ace2489beddf901fcb9cb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
 --- !u!4 &240177836 stripped
@@ -481,10 +485,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5771935625779910769}
     m_Modifications:
-    - target: {fileID: 100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
-      propertyPath: m_Name
-      value: roca3 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.552
@@ -541,6 +541,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 204.6637
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
+      propertyPath: m_Name
+      value: roca3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3332012f454ace2489beddf901fcb9cb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
 --- !u!4 &258026932 stripped
@@ -556,10 +564,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5771935625779910769}
     m_Modifications:
-    - target: {fileID: 100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
-      propertyPath: m_Name
-      value: roca3 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.599999
@@ -616,6 +620,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 176.07005
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
+      propertyPath: m_Name
+      value: roca3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3332012f454ace2489beddf901fcb9cb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
 --- !u!4 &278859891 stripped
@@ -711,10 +723,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5771935625779910769}
     m_Modifications:
-    - target: {fileID: 100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
-      propertyPath: m_Name
-      value: roca3 (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.5
@@ -771,6 +779,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 206.84697
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
+      propertyPath: m_Name
+      value: roca3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3332012f454ace2489beddf901fcb9cb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
 --- !u!4 &1298734336 stripped
@@ -786,10 +802,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5771935625779910769}
     m_Modifications:
-    - target: {fileID: 100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
-      propertyPath: m_Name
-      value: roca3 (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.348
@@ -846,6 +858,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 204.6637
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
+      propertyPath: m_Name
+      value: roca3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3332012f454ace2489beddf901fcb9cb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
 --- !u!4 &500557044899662849 stripped
@@ -861,10 +881,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5771935625779910769}
     m_Modifications:
-    - target: {fileID: 100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
-      propertyPath: m_Name
-      value: roca3 (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.3
@@ -921,6 +937,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 176.07005
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
+      propertyPath: m_Name
+      value: roca3 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3332012f454ace2489beddf901fcb9cb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
 --- !u!4 &5485699860371127665 stripped
@@ -936,10 +960,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5771935625779910769}
     m_Modifications:
-    - target: {fileID: 100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
-      propertyPath: m_Name
-      value: roca3 (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.34
@@ -996,6 +1016,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 176.06993
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
+      propertyPath: m_Name
+      value: roca3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3332012f454ace2489beddf901fcb9cb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
 --- !u!4 &8068794980282078462 stripped
@@ -1011,10 +1039,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5771935625779910769}
     m_Modifications:
-    - target: {fileID: 100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
-      propertyPath: m_Name
-      value: roca3 (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.4
@@ -1071,6 +1095,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 206.84697
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
+      propertyPath: m_Name
+      value: roca3 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3332012f454ace2489beddf901fcb9cb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9841aae461f1d146b8e3cf2c5e0f171, type: 3}
 --- !u!4 &8438465546776644424 stripped

@@ -12,7 +12,9 @@ public class CircuitGenerator : MonoBehaviour
     // External
     public GameObject emptyBox;
     public GameObject bomb;
-    
+    public GameObject column1;
+    public GameObject bridge1;
+
     // Internal Variables
     private bool startDestroying = false;
     private float destroyingTempo = 0.0f;
@@ -23,6 +25,32 @@ public class CircuitGenerator : MonoBehaviour
 
     void Start()
     {
+        int whatPut = Random.RandomRange(0, 2);
+        switch(whatPut)
+        {
+            case 0: // Cas columna
+                float randPosColumnX = Random.RandomRange(-4, 4);
+                float randPosColumnY = Random.RandomRange(gameObject.transform.position.z - 10, gameObject.transform.position.z + 10);
+                spawnPoint.GetComponent<Transform>().position = new Vector3(randPosColumnX, spawnPoint.GetComponent<Transform>().position.y, randPosColumnY);
+                GameObject itemThrown = Instantiate(column1, spawnPoint.transform.position, Quaternion.identity);
+                itemThrown.transform.rotation = Quaternion.Euler(new Vector3(-90, 0, 90));
+                Destroy(itemThrown, timeToKillAnItem);
+                break;
+            case 1: // Cas bridge
+                float randPosBridgeY = Random.RandomRange(gameObject.transform.position.z - 10, gameObject.transform.position.z + 10);
+                spawnPoint.GetComponent<Transform>().position = new Vector3(spawnPoint.GetComponent<Transform>().position.x + 5, spawnPoint.GetComponent<Transform>().position.y, randPosBridgeY);
+                GameObject itemThrown2 = Instantiate(bridge1, spawnPoint.transform.position, Quaternion.identity);
+                itemThrown2.transform.rotation = Quaternion.Euler(new Vector3(-90, 0, 90));
+                Destroy(itemThrown2, timeToKillAnItem);
+                break;
+            case 2: // Just nothing
+
+                break;
+            case 3:
+
+                break;
+        }
+       
     }
 
     void Update()
@@ -38,7 +66,7 @@ public class CircuitGenerator : MonoBehaviour
         if (throwItemTempo > timeToThrowAnItem)
         {
             float newRandPosToObjectSpawners = Random.RandomRange(-5, 5);
-            spawnPoint.GetComponent<Transform>().position = new Vector3(newRandPosToObjectSpawners, spawnPoint.GetComponent<Transform>().position.y, spawnPoint.GetComponent<Transform>().position.z);
+            spawnPoint.GetComponent<Transform>().position = new Vector3(newRandPosToObjectSpawners, spawnPoint.GetComponent<Transform>().position.y, spawnPoint.GetComponent<Transform>().position.z - 17);
             ThrowAnItem();
             throwItemTempo = 0.0f;
         }

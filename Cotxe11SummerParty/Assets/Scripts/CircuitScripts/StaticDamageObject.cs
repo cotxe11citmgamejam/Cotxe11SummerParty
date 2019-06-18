@@ -20,7 +20,7 @@ public class StaticDamageObject : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-
+            collision.gameObject.GetComponent<PlayerStats>().HP--;
         }
     }
 }

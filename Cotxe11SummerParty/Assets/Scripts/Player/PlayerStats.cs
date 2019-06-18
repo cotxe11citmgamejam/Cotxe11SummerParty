@@ -9,6 +9,7 @@ public class PlayerStats : MonoBehaviour
     public int HP = 3;
     public float time_controlls_inverted = 5.0f;
     public float time_extra_speed = 5.0f;
+    public float time_stain = 5.0f;
 
     public float extra_speed = 40.0f;
     public float extra_angular_speed = 10.0f;
@@ -18,9 +19,13 @@ public class PlayerStats : MonoBehaviour
     [HideInInspector]
     public bool speed_increased = false;
     [HideInInspector]
+    public bool stain_active = false;
+    [HideInInspector]
     public float timer_inverted_controlls = 0.0f;
     [HideInInspector]
     public float timer_extra_speed = 0.0f;
+    [HideInInspector]
+    public float timer_stain = 0.0f;
 
     private float original_speed = 5.0f;
     private float original_angular_speed = 5.0f;
@@ -38,6 +43,14 @@ public class PlayerStats : MonoBehaviour
     public GameObject life_saver_1;
     public GameObject life_saver_2;
     public GameObject life_saver_3;
+
+    //Stains
+    public GameObject stain1 = null;
+    public GameObject stain2 = null;
+    public GameObject stain3 = null;
+    public GameObject stain4 = null;
+    public GameObject stain5 = null;
+    private GameObject current_stain = null;
 
 
     // MODS
@@ -57,6 +70,7 @@ public class PlayerStats : MonoBehaviour
     {
         timer_inverted_controlls = 0.0f;
         timer_extra_speed = 0.0f;
+        timer_stain = 0.0f;
         original_speed = gameObject.GetComponent<PlayerController>().speed;
         original_angular_speed = gameObject.GetComponent<PlayerController>().angular_speed;
 
@@ -92,6 +106,17 @@ public class PlayerStats : MonoBehaviour
             if (timer_extra_speed >= time_extra_speed)
             {
                 ResetSpeed();
+            }
+        }
+
+        //Stain
+        if (stain_active == true)
+        {
+            timer_stain += Time.deltaTime;
+
+            if (timer_stain >= time_stain)
+            {
+                DesactivateStain();
             }
         }
 
@@ -180,6 +205,45 @@ public class PlayerStats : MonoBehaviour
         if (HP == 0)
             life_saver_3.SetActive(false);
 
+    }
+
+    public void Spawnstains()
+    {
+        int random = Random.Range(1, 5);
+        if (random == 1)
+        {
+            stain1.SetActive(true);
+            current_stain = stain1;
+        }
+        else if (random == 2)
+        {
+            stain2.SetActive(true);
+            current_stain = stain2;
+        }
+        else if (random == 3)
+        {
+            stain3.SetActive(true);
+            current_stain = stain3;
+        }
+        else if (random == 4)
+        {
+            stain4.SetActive(true);
+            current_stain = stain4;
+        }
+        else
+        {
+            stain5.SetActive(true);
+            current_stain = stain5;
+        }
+        stain_active = true;
+        timer_stain = 0.0f;
+    }
+
+    public void DesactivateStain()
+    {
+        current_stain.SetActive(false);
+        stain_active = false;
+        timer_stain = 0.0f;
     }
 
 }

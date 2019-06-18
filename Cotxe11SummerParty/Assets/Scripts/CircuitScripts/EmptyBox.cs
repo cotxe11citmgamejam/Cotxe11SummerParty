@@ -27,7 +27,7 @@ public class EmptyBox : MonoBehaviour
         {
             box_usable.SetActive(false);
             box_broken.SetActive(true);
-            random_number = Random.Range(1,3);
+            random_number = Random.Range(1,4);
             if (random_number == 1)
             {
                 if (other.gameObject.GetComponent<PlayerStats>().controlls_inverted == false)
@@ -50,10 +50,21 @@ public class EmptyBox : MonoBehaviour
                     other.gameObject.GetComponent<PlayerStats>().timer_extra_speed = 0.0f;
                 }
             }
-            else
+            else if(random_number == 3)
             {
                 GameObject generator = GameObject.FindWithTag("Circuit");
                 generator.GetComponent<CircuitGenerator>().timeToThrowAnItem = 2.5f;
+            }
+            else
+            {
+                if (other.gameObject.GetComponent<PlayerStats>().stain_active == false)
+                {
+                    other.gameObject.GetComponent<PlayerStats>().Spawnstains();
+                }
+                else
+                {
+                    other.gameObject.GetComponent<PlayerStats>().timer_stain = 0.0f;
+                }
             }
         }
     }

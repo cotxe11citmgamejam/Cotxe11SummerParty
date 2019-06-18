@@ -28,8 +28,9 @@ public class CircuitGenerator : MonoBehaviour
 
 	void OnTriggerEnter(Collider collision)
 	{
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
+            print("chock");
             GenerateNewPart();
         }
 	}

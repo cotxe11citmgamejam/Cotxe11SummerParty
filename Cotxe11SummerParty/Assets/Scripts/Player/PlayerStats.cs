@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -24,6 +25,16 @@ public class PlayerStats : MonoBehaviour
     private float original_speed = 5.0f;
     private float original_angular_speed = 5.0f;
 
+    //UI elements
+    public GameObject UI_invert_debuff;
+    public GameObject UI_invert_text;
+    private Text invert_text;
+    public GameObject UI_run_debuff;
+    public GameObject UI_run_text;
+    private Text run_text;
+
+
+
     // MODS
     public enum MOD_STATS
     {
@@ -43,6 +54,11 @@ public class PlayerStats : MonoBehaviour
         timer_extra_speed = 0.0f;
         original_speed = gameObject.GetComponent<PlayerController>().speed;
         original_angular_speed = gameObject.GetComponent<PlayerController>().angular_speed;
+
+
+        //UI
+        invert_text = UI_invert_text.GetComponent<Text>();
+        run_text = UI_run_text.GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -54,6 +70,9 @@ public class PlayerStats : MonoBehaviour
         if (controlls_inverted == true)
         {
             timer_inverted_controlls += Time.deltaTime;
+            invert_text.text = (time_controlls_inverted - timer_inverted_controlls).ToString("F0");
+                
+
             if (timer_inverted_controlls >= time_controlls_inverted)
             {
                 InvertControlls();
@@ -63,6 +82,8 @@ public class PlayerStats : MonoBehaviour
         if (speed_increased == true)
         {
             timer_extra_speed += Time.deltaTime;
+            run_text.text = (time_extra_speed - timer_extra_speed).ToString("F0");
+
             if (timer_extra_speed >= time_extra_speed)
             {
                 ResetSpeed();
@@ -98,6 +119,9 @@ public class PlayerStats : MonoBehaviour
             gameObject.GetComponent<PlayerController>().key_left = "d";
             gameObject.GetComponent<PlayerController>().key_right = "a";
             controlls_inverted = true;
+            UI_invert_debuff.SetActive(true);
+            UI_invert_text.SetActive(true);
+
             timer_inverted_controlls = 0.0f;
         }
         else
@@ -105,6 +129,9 @@ public class PlayerStats : MonoBehaviour
             gameObject.GetComponent<PlayerController>().key_left = "a";
             gameObject.GetComponent<PlayerController>().key_right = "d";
             controlls_inverted = false;
+            UI_invert_debuff.SetActive(false);
+            UI_invert_text.SetActive(false);
+
             timer_inverted_controlls = 0.0f;
         }
     }
@@ -114,6 +141,9 @@ public class PlayerStats : MonoBehaviour
         gameObject.GetComponent<PlayerController>().speed = original_speed;
         gameObject.GetComponent<PlayerController>().angular_speed = original_angular_speed;
         speed_increased = false;
+        UI_run_debuff.SetActive(false);
+        UI_run_text.SetActive(false);
+
         timer_extra_speed = 0.0f;
     }
 
@@ -122,6 +152,9 @@ public class PlayerStats : MonoBehaviour
         gameObject.GetComponent<PlayerController>().speed = extra_speed;
         gameObject.GetComponent<PlayerController>().angular_speed = extra_angular_speed;
         speed_increased = true;
+        UI_run_debuff.SetActive(true);
+        UI_run_text.SetActive(true);
+
         timer_extra_speed = 0.0f;
     }
 

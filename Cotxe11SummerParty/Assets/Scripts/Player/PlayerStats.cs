@@ -26,6 +26,7 @@ public class PlayerStats : MonoBehaviour
     private float original_angular_speed = 5.0f;
 
     //UI elements
+    //Desabilities
     public GameObject UI_invert_debuff;
     public GameObject UI_invert_text;
     private Text invert_text;
@@ -33,6 +34,10 @@ public class PlayerStats : MonoBehaviour
     public GameObject UI_run_text;
     private Text run_text;
 
+    //Life
+    public GameObject life_saver_1;
+    public GameObject life_saver_2;
+    public GameObject life_saver_3;
 
 
     // MODS
@@ -168,6 +173,13 @@ public class PlayerStats : MonoBehaviour
     public void LoseHP()
     {
         HP--;
+        if (HP == 2)
+            life_saver_1.SetActive(false);
+        if (HP == 1)
+            life_saver_2.SetActive(false);
+        if (HP == 0)
+            life_saver_3.SetActive(false);
+
     }
 
 }

@@ -29,14 +29,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(key_front))
-        {
+        //if(Input.GetKey(key_front))
+       // {
             transform.Translate(Vector3.right * speed * Time.deltaTime);
-        }
-        if (Input.GetKey(key_back))
-        {
-            transform.Translate(Vector3.left * speed * Time.deltaTime);
-        }
+        //}
+        //if (Input.GetKey(key_back))
+        //{
+        //    transform.Translate(Vector3.left * speed * Time.deltaTime);
+        //}
         if (Input.GetKey(key_left))
         {
             Vector3 new_rotation = new Vector3();

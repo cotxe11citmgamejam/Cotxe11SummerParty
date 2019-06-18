@@ -11,6 +11,15 @@ public class PlayerController : MonoBehaviour
     public float left_max_angle = -45.0f;
     public float right_max_angle = 45.0f;
 
+    [HideInInspector]
+    public string key_front = "w";
+    [HideInInspector]
+    public string key_back = "s";
+    [HideInInspector]
+    public string key_right = "d";
+    [HideInInspector]
+    public string key_left = "a";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,15 +29,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.W))
+        if(Input.GetKey(key_front))
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(key_back))
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(key_left))
         {
             Vector3 new_rotation = new Vector3();
             new_rotation.y = transform.rotation.eulerAngles.y;
@@ -49,7 +58,7 @@ public class PlayerController : MonoBehaviour
                 transform.Rotate(0.0f, 360.0f - new_rotation.y, 0.0f);
             }
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(key_right))
         {
             Vector3 new_rotation = new Vector3();
             new_rotation.y = transform.rotation.eulerAngles.y;

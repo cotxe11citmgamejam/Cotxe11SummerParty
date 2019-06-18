@@ -25,6 +25,10 @@ public class EmptyBox : MonoBehaviour
         {
             box_usable.SetActive(false);
             box_broken.SetActive(true);
+            if (other.gameObject.GetComponent<PlayerStats>().controlls_inverted == false)
+            {
+                other.gameObject.GetComponent<PlayerStats>().InvertControlls();
+            }
         }
     }
 }

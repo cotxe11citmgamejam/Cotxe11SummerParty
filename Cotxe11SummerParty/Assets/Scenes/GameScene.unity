@@ -314,6 +314,10 @@ MonoBehaviour:
   angular_speed: 5
   left_max_angle: -45
   right_max_angle: 45
+  key_front: w
+  key_back: s
+  key_right: d
+  key_left: a
 --- !u!4 &887818221
 Transform:
   m_ObjectHideFlags: 0
@@ -356,6 +360,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 3
+  time_controlls_inverted: 5
+  controlls_inverted: 0
 --- !u!1 &932830951
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,6 +24,18 @@ public class PlayerStats : MonoBehaviour
     private float original_speed = 5.0f;
     private float original_angular_speed = 5.0f;
 
+    // MODS
+    public enum MOD_STATS
+    {
+        ANY = 0,
+        BLESSED_BY_GOD
+    }
+    MOD_STATS mod_stats = MOD_STATS.ANY;
+    private bool modActived = false;
+    private float modTimer = 0.0f;
+    public float modTimerMax = 3.0f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +48,8 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.O))
+            AddMod(MOD_STATS.BLESSED_BY_GOD);
         //Invert Controlls
         if (controlls_inverted == true)
         {
@@ -51,6 +65,27 @@ public class PlayerStats : MonoBehaviour
             timer_extra_speed += Time.deltaTime;
             if (timer_extra_speed >= time_extra_speed)
             {
+                ResetSpeed();
+            }
+        }
+
+        modTimer += Time.deltaTime;
+        if (modTimer < modTimerMax)
+        {
+            switch (mod_stats)
+            {
+                case MOD_STATS.BLESSED_BY_GOD:
+                    extra_speed = 40;
+                    GiveExtraSpeed();
+                    break;
+            }
+        }
+        else
+        {
+            if (modActived)
+            {
+                modActived = false;
+                // Desactivar tots els stats bonus
                 ResetSpeed();
             }
         }
@@ -88,6 +123,13 @@ public class PlayerStats : MonoBehaviour
         gameObject.GetComponent<PlayerController>().angular_speed = extra_angular_speed;
         speed_increased = true;
         timer_extra_speed = 0.0f;
+    }
+
+    public void AddMod(MOD_STATS newStat)
+    {
+        mod_stats = newStat;
+        modActived = true;
+        modTimer = 0.0f;
     }
 
 }

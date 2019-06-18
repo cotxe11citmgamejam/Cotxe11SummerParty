@@ -6,6 +6,7 @@ public class EmptyBox : MonoBehaviour
 {
     public GameObject box_usable;
     public GameObject box_broken;
+    public float boxSpeed = 0.5f;
 
     void Start()
     {
@@ -15,12 +16,15 @@ public class EmptyBox : MonoBehaviour
 
     void Update()
     {
-        
+        transform.Translate(new Vector3(0,0,boxSpeed));
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        box_usable.SetActive(false);
-        box_broken.SetActive(true);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            box_usable.SetActive(false);
+            box_broken.SetActive(true);
+        }
     }
 }

@@ -15,7 +15,7 @@ public class CircuitGenerator : MonoBehaviour
     // Internal Variables
     private bool startDestroying = false;
     private float destroyingTempo = 0.0f;
-    private float throwItemTempo = 0.0f;
+    private float throwItemTempo = 5.0f;
 
     public float timeToThrowAnItem = 5.0f;
     public float timeToKillAnItem = 10.0f;
@@ -62,7 +62,7 @@ public class CircuitGenerator : MonoBehaviour
         int itemNum = Random.RandomRange(0, 0); // Numero total d'items
         switch (itemNum)
         {
-            case 0:
+            case 0: 
                 GameObject itemThrown = Instantiate(emptyBox, spawnPoint.transform.position, Quaternion.identity);
                 Destroy(itemThrown, timeToKillAnItem);
                 break;

@@ -5,8 +5,8 @@ using UnityEngine;
 public class MoveWater : MonoBehaviour
 {
     private float vertex_inclination = 0.3f;
-    private float force = 0.8f;
-    private float time_to_wave = 0.5f;
+    private float force = 1.0f;
+    private float time_to_wave = 1.5f;
 
     private float offsetX;
     private float offsetY;

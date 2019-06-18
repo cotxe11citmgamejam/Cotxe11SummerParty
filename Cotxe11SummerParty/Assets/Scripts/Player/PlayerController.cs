@@ -22,15 +22,11 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.W))
         {
-            Vector3 new_pos = transform.localPosition;
-            new_pos.x = new_pos.x + speed * Time.deltaTime;
-            transform.SetPositionAndRotation(new_pos, transform.rotation);
+            transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            Vector3 new_pos = transform.localPosition;
-            new_pos.x = new_pos.x - speed * Time.deltaTime;
-            transform.SetPositionAndRotation(new_pos, transform.rotation);
+            transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.A))
         {

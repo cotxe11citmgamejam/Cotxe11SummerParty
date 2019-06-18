@@ -6,7 +6,7 @@ public class CircuitGenerator : MonoBehaviour
 {
     // Internal
     public GameObject circuitPart;
-    public GameObject spawnPoint;
+    public GameObject spawnPoint; 
     public Transform nextCircuitPoint;
 
     // External
@@ -59,7 +59,10 @@ public class CircuitGenerator : MonoBehaviour
         {
             destroyingTempo += Time.deltaTime;
             if (destroyingTempo > 10)
+            {
                 Destroy(gameObject);
+                spawnPoint.SetActive(false);
+            }
         }
 
         throwItemTempo += Time.deltaTime;

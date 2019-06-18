@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 new_rotation = new Vector3();
             new_rotation.y = transform.rotation.eulerAngles.y;
-            if (new_rotation.y > 90 + left_max_angle)
+            if (new_rotation.y >= 90 + left_max_angle)
             {
                 if (transform.rotation.eulerAngles.y > 0)
                 {
@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 new_rotation = new Vector3();
             new_rotation.y = transform.rotation.eulerAngles.y;
-            if (new_rotation.y < 90 + right_max_angle)
+            if (new_rotation.y <= 90 + right_max_angle)
             {
                 //Vector3 new_rotation = transform.rotation.eulerAngles;
                 if ((transform.rotation.eulerAngles.y < right_max_angle && transform.rotation.eulerAngles.y >= 0.0f) || transform.rotation.eulerAngles.y > right_max_angle)

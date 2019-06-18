@@ -291,6 +291,7 @@ GameObject:
   - component: {fileID: 887818220}
   - component: {fileID: 887818222}
   - component: {fileID: 887818223}
+  - component: {fileID: 887818224}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -314,6 +315,10 @@ MonoBehaviour:
   angular_speed: 5
   left_max_angle: -45
   right_max_angle: 45
+  key_front: w
+  key_back: s
+  key_right: d
+  key_left: a
 --- !u!4 &887818221
 Transform:
   m_ObjectHideFlags: 0
@@ -359,6 +364,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &887818224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887818219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec1aa85811df714292d0e0c0c0a88aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 3
+  time_controlls_inverted: 5
+  time_extra_speed: 5
+  extra_speed: 10
+  extra_angular_speed: 10
+  controlls_inverted: 0
+  speed_increased: 0
+  timer_inverted_controlls: 0
+  timer_extra_speed: 0
 --- !u!1 &932830951
 GameObject:
   m_ObjectHideFlags: 0

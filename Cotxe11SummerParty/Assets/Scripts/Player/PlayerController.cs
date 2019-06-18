@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    public float speed = 5.0f;
+    public float speed = 20.0f;
     public float angular_speed = 5.0f;
 
     public float left_max_angle = -45.0f;

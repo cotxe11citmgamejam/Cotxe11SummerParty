@@ -9,7 +9,7 @@ public class PlayerStats : MonoBehaviour
     public float time_controlls_inverted = 5.0f;
     public float time_extra_speed = 5.0f;
 
-    public float extra_speed = 10.0f;
+    public float extra_speed = 40.0f;
     public float extra_angular_speed = 10.0f;
 
     [HideInInspector]

@@ -11,6 +11,7 @@ public class CircuitGenerator : MonoBehaviour
 
     // External
     public GameObject emptyBox;
+    public GameObject bomb;
     
     // Internal Variables
     private bool startDestroying = false;
@@ -59,7 +60,7 @@ public class CircuitGenerator : MonoBehaviour
 
     void ThrowAnItem()
     {
-        int itemNum = Random.RandomRange(0, 0); // Numero total d'items
+        int itemNum = Random.RandomRange(0,2); // Numero total d'items
         switch (itemNum)
         {
             case 0: 
@@ -67,7 +68,8 @@ public class CircuitGenerator : MonoBehaviour
                 Destroy(itemThrown, timeToKillAnItem);
                 break;
             case 1:
-
+                GameObject itemThrown2 = Instantiate(bomb, spawnPoint.transform.position, Quaternion.identity);
+                Destroy(itemThrown2, timeToKillAnItem);
                 break;
         }
     }

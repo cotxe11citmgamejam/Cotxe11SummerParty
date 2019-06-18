@@ -23,7 +23,7 @@ public class StaticDamageObject : MonoBehaviour
         {
             if (hitted == false)
             {
-                collision.gameObject.GetComponent<PlayerStats>().HP--;
+                collision.gameObject.GetComponent<PlayerStats>().LoseHP();
                 hitted = true;
             }
         }

@@ -22,7 +22,7 @@ public class Bomb : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<PlayerStats>().HP--;
+            other.gameObject.GetComponent<PlayerStats>().LoseHP();
         }
     }
 }

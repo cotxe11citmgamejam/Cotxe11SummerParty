@@ -165,4 +165,9 @@ public class PlayerStats : MonoBehaviour
         modTimer = 0.0f;
     }
 
+    public void LoseHP()
+    {
+        HP--;
+    }
+
 }

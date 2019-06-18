@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class WaterPlaneMake : MonoBehaviour
 {
-
     private float plane_size = 25.0f;
     private float grid_size = 10.0f;
-    private MeshFilter planeMesh;
+    private MeshFilter plane_mesh;
 
     void Start()
     {
-        planeMesh = GetComponent<MeshFilter>();
-        planeMesh.mesh = GenerateMesh();
+        plane_mesh = GetComponent<MeshFilter>();
+        plane_mesh.mesh = GenerateMesh();
     }
 
     void Update()
@@ -32,7 +31,10 @@ public class WaterPlaneMake : MonoBehaviour
         {
             for (int j = 0; j < grid_size + 1; j++)
             {
-                vertices.Add(new Vector3(-plane_size * 0.5f + plane_size * (i / grid_size), 0, -plane_size * 0.5f + plane_size * (j / grid_size)));
+                float vertex_X = -plane_size * 0.5f + plane_size * (i / grid_size);
+                float vertex_Z = -plane_size * 0.5f + plane_size * (j / grid_size);
+                vertices.Add(new Vector3(vertex_X, 0, vertex_Z));
+
                 normals.Add(Vector3.up);
                 uvs.Add(new Vector2(i / grid_size, j / grid_size));
             }
@@ -60,7 +62,6 @@ public class WaterPlaneMake : MonoBehaviour
         mesh.SetTriangles(triangles, 0);
 
         return mesh;
-
     }
 
 }

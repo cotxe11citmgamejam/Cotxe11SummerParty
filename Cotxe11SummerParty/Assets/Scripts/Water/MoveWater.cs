@@ -10,11 +10,11 @@ public class MoveWater : MonoBehaviour
 
     private float offsetX;
     private float offsetY;
-    private MeshFilter planeMesh;
+    private MeshFilter plane_mesh;
     
     void Start()
     {
-        planeMesh = GetComponent<MeshFilter>();
+        plane_mesh = GetComponent<MeshFilter>();
         Move();
     }
 
@@ -25,18 +25,16 @@ public class MoveWater : MonoBehaviour
         offsetY += Time.deltaTime * time_to_wave;
     }
 
-
-
     void Move()
     {
-        Vector3[] vertices = planeMesh.mesh.vertices;
+        Vector3[] vertices = plane_mesh.mesh.vertices;
 
         for(int i = 0; i < vertices.Length; i++)
         {
             vertices[i].y = CalculateHeight(vertices[i].x, vertices[i].z) * force;
 
         }
-        planeMesh.mesh.vertices = vertices;
+        plane_mesh.mesh.vertices = vertices;
 
     }
 

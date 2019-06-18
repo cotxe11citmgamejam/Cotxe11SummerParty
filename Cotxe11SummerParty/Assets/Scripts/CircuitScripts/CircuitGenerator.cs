@@ -6,6 +6,7 @@ public class CircuitGenerator : MonoBehaviour
 {
 
     public GameObject circuitPart;
+    public GameObject spawnPoint;
     public Transform nextCircuitPoint;
 
     private bool startDestroying = false;
@@ -13,7 +14,8 @@ public class CircuitGenerator : MonoBehaviour
 
     void Start()
     {
-        
+        float newRandPosToObjectSpawners = Random.RandomRange(-5, 5);
+        spawnPoint.GetComponent<Transform>().position = new Vector3 (newRandPosToObjectSpawners, spawnPoint.GetComponent<Transform>().position.y, spawnPoint.GetComponent<Transform>().position.z);
     }
 
     void Update()

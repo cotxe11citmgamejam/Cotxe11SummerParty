@@ -5,6 +5,7 @@ using UnityEngine;
 public class StaticDamageObject : MonoBehaviour
 {
     private GameObject player;
+    private bool hitted = false;
 
     void Start()
     {
@@ -20,7 +21,11 @@ public class StaticDamageObject : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerStats>().HP--;
+            if (hitted == false)
+            {
+                collision.gameObject.GetComponent<PlayerStats>().HP--;
+                hitted = true;
+            }
         }
     }
 }

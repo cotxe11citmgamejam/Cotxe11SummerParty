@@ -82,6 +82,11 @@ MonoBehaviour:
   circuitPart: {fileID: 835383545914542120}
   spawnPoint: {fileID: 299829804}
   nextCircuitPoint: {fileID: 1463970430204104616}
+  emptyBox: {fileID: 6651801962630311820, guid: 7c53c17534c424940a005b83b63f6ff8,
+    type: 3}
+  bomb: {fileID: 1157162487934389325, guid: 82db5508f2aae714f9b83cce127392a9, type: 3}
+  timeToThrowAnItem: 5
+  timeToKillAnItem: 10
 --- !u!65 &9124647740803788532
 BoxCollider:
   m_ObjectHideFlags: 0

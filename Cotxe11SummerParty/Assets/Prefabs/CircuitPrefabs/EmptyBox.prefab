@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d098998dac76fae46922514f545286d6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   box_usable: {fileID: 5987899462922803377}
   box_broken: {fileID: 8716018640762136964}
+  boxSpeed: 0.5
 --- !u!1 &8716018640762136964
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,10 +242,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7286906094005226977}
     m_Modifications:
-    - target: {fileID: 100000, guid: 48b1cfe26ec15a64ab8204e95dc35b4d, type: 3}
-      propertyPath: m_Name
-      value: caixa_notBroken
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 48b1cfe26ec15a64ab8204e95dc35b4d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.11530917
@@ -301,6 +298,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 59.508003
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 48b1cfe26ec15a64ab8204e95dc35b4d, type: 3}
+      propertyPath: m_Name
+      value: caixa_notBroken
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 48b1cfe26ec15a64ab8204e95dc35b4d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d098998dac76fae46922514f545286d6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48b1cfe26ec15a64ab8204e95dc35b4d, type: 3}
 --- !u!4 &65918829686605024 stripped
@@ -316,10 +321,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4133498401466741170}
     m_Modifications:
-    - target: {fileID: 100000, guid: aae551d6a1ef20c44b91dd5c1f6acbd9, type: 3}
-      propertyPath: m_Name
-      value: caixa_Broken
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aae551d6a1ef20c44b91dd5c1f6acbd9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.54518
@@ -376,6 +377,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 16.491583
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: aae551d6a1ef20c44b91dd5c1f6acbd9, type: 3}
+      propertyPath: m_Name
+      value: caixa_Broken
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: aae551d6a1ef20c44b91dd5c1f6acbd9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d098998dac76fae46922514f545286d6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aae551d6a1ef20c44b91dd5c1f6acbd9, type: 3}
 --- !u!4 &2589075303010770826 stripped

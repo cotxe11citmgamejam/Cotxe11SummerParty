@@ -14,8 +14,11 @@ public class PlayerStats : MonoBehaviour
 
     [HideInInspector]
     public bool controlls_inverted = false;
+    [HideInInspector]
     public bool speed_increased = false;
+    [HideInInspector]
     public float timer_inverted_controlls = 0.0f;
+    [HideInInspector]
     public float timer_extra_speed = 0.0f;
 
     private float original_speed = 5.0f;

@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public string key_left = "a";
 
-    public float time2change_scene = 2.0f;
+    public float time2change_scene = 3.0f;
     private float timer2change_scene = 0.0f;
 
     // Start is called before the first frame update

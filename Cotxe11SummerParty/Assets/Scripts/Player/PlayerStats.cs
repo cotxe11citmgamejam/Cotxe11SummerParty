@@ -14,6 +14,9 @@ public class PlayerStats : MonoBehaviour
     public float extra_speed = 40.0f;
     public float extra_angular_speed = 10.0f;
 
+    private float player_original_pos = 0.0f;
+    private float distance_done = 0.0f;
+
     [HideInInspector]
     public bool dead = false;
     [HideInInspector]
@@ -31,6 +34,7 @@ public class PlayerStats : MonoBehaviour
 
     private float original_speed = 5.0f;
     private float original_angular_speed = 5.0f;
+    public Text distance_text;
 
     //UI elements
     //Desabilities
@@ -79,6 +83,7 @@ public class PlayerStats : MonoBehaviour
         original_speed = gameObject.GetComponent<PlayerController>().speed;
         original_angular_speed = gameObject.GetComponent<PlayerController>().angular_speed;
 
+        player_original_pos = transform.position.z;
 
         //UI
         invert_text = UI_invert_text.GetComponent<Text>();
@@ -91,6 +96,11 @@ public class PlayerStats : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.O))
             AddMod(MOD_STATS.BLESSED_BY_GOD);
+
+        //Distance
+        distance_done = player_original_pos - transform.position.z;
+        distance_text.text = distance_done.ToString("F0") + "m";
+
         //Invert Controlls
         if (controlls_inverted == true)
         {

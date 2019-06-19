@@ -237,6 +237,15 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public void Die()
+    {
+        HP = 0;
+        life_saver_1.SetActive(false);
+        life_saver_2.SetActive(false);
+        life_saver_3.SetActive(false);
+        dead = true;
+    }
+
     public void Spawnstains()
     {
         int random = Random.Range(1, 5);

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
 
-    public float boxSpeed = 0.5f;
+    public float boxSpeed = 1.0f;
 
     void Start()
     {

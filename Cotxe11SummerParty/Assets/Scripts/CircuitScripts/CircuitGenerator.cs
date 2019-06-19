@@ -20,7 +20,7 @@ public class CircuitGenerator : MonoBehaviour
     private float destroyingTempo = 0.0f;
     private float throwItemTempo = 5.0f;
 
-    public float timeToThrowAnItem = 5.0f;
+    public float timeToThrowAnItem = 2.5f;
     public float timeToKillAnItem = 10.0f;
 
     void Start()

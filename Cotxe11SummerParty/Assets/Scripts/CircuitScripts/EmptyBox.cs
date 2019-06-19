@@ -6,7 +6,7 @@ public class EmptyBox : MonoBehaviour
 {
     public GameObject box_usable;
     public GameObject box_broken;
-    public float boxSpeed = 0.5f;
+    public float boxSpeed = 1.0f;
 
     private int random_number = 0;
 

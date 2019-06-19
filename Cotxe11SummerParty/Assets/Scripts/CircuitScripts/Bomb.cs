@@ -5,11 +5,13 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
 
-    public float boxSpeed = 0.5f;
+    public float boxSpeed = 1.0f;
+    GameObject a_source;
+    public AudioClip explosion;
 
     void Start()
     {
-        
+        a_source = GameObject.Find("Global");
     }
 
     void Update()
@@ -22,6 +24,7 @@ public class Bomb : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            a_source.GetComponent<AudioSource>().PlayOneShot(explosion);
             other.gameObject.GetComponent<PlayerStats>().LoseHP();
         }
     }

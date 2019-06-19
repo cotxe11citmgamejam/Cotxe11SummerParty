@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class BordersCollisions : MonoBehaviour
 {
+    public AudioSource source;
+    public AudioClip hit_02;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +24,7 @@ public class BordersCollisions : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            source.PlayOneShot(hit_02);
             collision.gameObject.GetComponent<PlayerStats>().Die();
         }
     }

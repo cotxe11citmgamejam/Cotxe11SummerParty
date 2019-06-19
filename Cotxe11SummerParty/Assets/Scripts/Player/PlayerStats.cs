@@ -15,6 +15,8 @@ public class PlayerStats : MonoBehaviour
     public float extra_angular_speed = 10.0f;
 
     [HideInInspector]
+    public bool dead = false;
+    [HideInInspector]
     public bool controlls_inverted = false;
     [HideInInspector]
     public bool speed_increased = false;
@@ -203,8 +205,10 @@ public class PlayerStats : MonoBehaviour
         if (HP == 1)
             life_saver_2.SetActive(false);
         if (HP == 0)
+        {
             life_saver_3.SetActive(false);
-
+            dead = true;
+        }
     }
 
     public void Spawnstains()

@@ -53,6 +53,8 @@ public class PlayerStats : MonoBehaviour
     public GameObject life_saver_1;
     public GameObject life_saver_2;
     public GameObject life_saver_3;
+    public GameObject smoke_particle;
+    public GameObject fire_particle;
 
     //Stains
     public GameObject stain1 = null;
@@ -238,12 +240,20 @@ public class PlayerStats : MonoBehaviour
 
         //UI
         if (HP == 2)
+        {
             life_saver_1.SetActive(false);
+            smoke_particle.SetActive(true);
+        }  
         if (HP == 1)
+        {
             life_saver_2.SetActive(false);
+            smoke_particle.SetActive(false);
+            fire_particle.SetActive(true);
+        }
         if (HP == 0)
         {
             life_saver_3.SetActive(false);
+            fire_particle.SetActive(false);
             dead = true;
         }
     }

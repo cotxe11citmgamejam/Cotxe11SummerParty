@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,10 +21,13 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public string key_left = "a";
 
+    public float time2change_scene = 2.0f;
+    private float timer2change_scene = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        timer2change_scene = 0.0f;
     }
 
     // Update is called once per frame
@@ -88,7 +92,12 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            timer2change_scene += Time.deltaTime;
             transform.Translate(Vector3.down * 0.5f * Time.deltaTime);
+            if (timer2change_scene >= time2change_scene)
+            {
+                SceneManager.LoadScene("Finish");
+            }
         }
     }
 }

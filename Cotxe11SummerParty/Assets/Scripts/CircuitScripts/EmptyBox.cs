@@ -52,11 +52,6 @@ public class EmptyBox : MonoBehaviour
             }
             else if(random_number == 3)
             {
-                GameObject generator = GameObject.FindWithTag("Circuit");
-                generator.GetComponent<CircuitGenerator>().timeToThrowAnItem = 2.5f;
-            }
-            else
-            {
                 if (other.gameObject.GetComponent<PlayerStats>().stain_active == false)
                 {
                     other.gameObject.GetComponent<PlayerStats>().Spawnstains();
@@ -65,6 +60,12 @@ public class EmptyBox : MonoBehaviour
                 {
                     other.gameObject.GetComponent<PlayerStats>().timer_stain = 0.0f;
                 }
+            }
+            else
+            {
+
+                GameObject generator = GameObject.FindWithTag("Circuit");
+                generator.GetComponent<CircuitGenerator>().timeToThrowAnItem = 2.5f;
             }
         }
     }

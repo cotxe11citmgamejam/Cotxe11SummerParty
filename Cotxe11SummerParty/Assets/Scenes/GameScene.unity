@@ -2185,6 +2185,10 @@ MonoBehaviour:
   stain4: {fileID: 488046459}
   stain5: {fileID: 216567440}
   modTimerMax: 3
+  source: {fileID: 2036535897}
+  run_debuff_clip: {fileID: 8300000, guid: 97bdadc1546c63440973d9fc4d4fb2ac, type: 3}
+  invert_debuff_clip: {fileID: 8300000, guid: 92bec2d09f24b26489caf9f8d81861c5, type: 3}
+  ink_debuff_clip: {fileID: 8300000, guid: ee0034c4078234841af9e2913f032adb, type: 3}
 --- !u!1 &896452516
 GameObject:
   m_ObjectHideFlags: 0

@@ -74,6 +74,11 @@ public class PlayerStats : MonoBehaviour
     private float modTimer = 0.0f;
     public float modTimerMax = 3.0f;
 
+    // Audio
+    public AudioSource source;
+    public AudioClip run_debuff_clip;
+    public AudioClip invert_debuff_clip;
+    public AudioClip ink_debuff_clip;
 
     // Start is called before the first frame update
     void Start()
@@ -172,6 +177,9 @@ public class PlayerStats : MonoBehaviour
             UI_invert_debuff.SetActive(true);
             UI_invert_text.SetActive(true);
 
+            //SFX
+            source.PlayOneShot(invert_debuff_clip);
+
             timer_inverted_controlls = 0.0f;
         }
         else
@@ -210,6 +218,9 @@ public class PlayerStats : MonoBehaviour
         //UI
         UI_run_debuff.SetActive(true);
         UI_run_text.SetActive(true);
+
+        //SFX
+        source.PlayOneShot(run_debuff_clip);
 
         timer_extra_speed = 0.0f;
     }
@@ -279,6 +290,9 @@ public class PlayerStats : MonoBehaviour
         //UI
         UI_ink_debuff.SetActive(true);
         UI_ink_text.SetActive(true);
+
+        //SFX
+        source.PlayOneShot(ink_debuff_clip);
 
         timer_stain = 0.0f;
     }

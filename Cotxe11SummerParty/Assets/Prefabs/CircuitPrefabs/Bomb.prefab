@@ -76,6 +76,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxSpeed: 0.5
+  source: {fileID: 0}
+  explosion: {fileID: 8300000, guid: f56842163c2a19b4583877b71d4681a1, type: 3}
 --- !u!1001 &1244412134605741789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83,6 +85,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6454078960192747975}
     m_Modifications:
+    - target: {fileID: 100000, guid: 93ec42a85bf2ecc4295bf28c4ae1f9b3, type: 3}
+      propertyPath: m_Name
+      value: bomba
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 93ec42a85bf2ecc4295bf28c4ae1f9b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.62
@@ -126,10 +132,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 93ec42a85bf2ecc4295bf28c4ae1f9b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 93ec42a85bf2ecc4295bf28c4ae1f9b3, type: 3}
-      propertyPath: m_Name
-      value: bomba
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 93ec42a85bf2ecc4295bf28c4ae1f9b3, type: 3}
       propertyPath: m_Materials.Array.data[0]

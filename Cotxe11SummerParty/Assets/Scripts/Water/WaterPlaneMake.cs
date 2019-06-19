@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WaterPlaneMake : MonoBehaviour
 {
-    private float plane_size = 80.0f;
-    private float grid_size = 25.0f;
+    public float plane_size = 80.0f;
+    public float grid_size = 25.0f;
     private MeshFilter plane_mesh;
 
     void Start()

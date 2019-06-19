@@ -15,7 +15,8 @@ public class PlayerStats : MonoBehaviour
     public float extra_angular_speed = 10.0f;
 
     private float player_original_pos = 0.0f;
-    private float distance_done = 0.0f;
+    [HideInInspector]
+    public float distance_done = 0.0f;
 
     [HideInInspector]
     public bool dead = false;

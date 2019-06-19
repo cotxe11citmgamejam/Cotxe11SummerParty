@@ -96,6 +96,7 @@ public class PlayerController : MonoBehaviour
             transform.Translate(Vector3.down * 0.5f * Time.deltaTime);
             if (timer2change_scene >= time2change_scene)
             {
+                PlayerPrefs.SetFloat("Distance", gameObject.GetComponent<PlayerStats>().distance_done);
                 SceneManager.LoadScene("Finish");
             }
         }

@@ -40,6 +40,9 @@ public class PlayerStats : MonoBehaviour
     public GameObject UI_run_debuff;
     public GameObject UI_run_text;
     private Text run_text;
+    public GameObject UI_ink_debuff;
+    public GameObject UI_ink_text;
+    private Text ink_text;
 
     //Life
     public GameObject life_saver_1;
@@ -80,6 +83,7 @@ public class PlayerStats : MonoBehaviour
         //UI
         invert_text = UI_invert_text.GetComponent<Text>();
         run_text = UI_run_text.GetComponent<Text>();
+        ink_text = UI_ink_text.GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -115,6 +119,7 @@ public class PlayerStats : MonoBehaviour
         if (stain_active == true)
         {
             timer_stain += Time.deltaTime;
+            ink_text.text = (time_stain - timer_stain).ToString("F0");
 
             if (timer_stain >= time_stain)
             {
@@ -151,6 +156,8 @@ public class PlayerStats : MonoBehaviour
             gameObject.GetComponent<PlayerController>().key_left = "d";
             gameObject.GetComponent<PlayerController>().key_right = "a";
             controlls_inverted = true;
+
+            //UI
             UI_invert_debuff.SetActive(true);
             UI_invert_text.SetActive(true);
 
@@ -161,6 +168,8 @@ public class PlayerStats : MonoBehaviour
             gameObject.GetComponent<PlayerController>().key_left = "a";
             gameObject.GetComponent<PlayerController>().key_right = "d";
             controlls_inverted = false;
+
+            //UI
             UI_invert_debuff.SetActive(false);
             UI_invert_text.SetActive(false);
 
@@ -173,6 +182,8 @@ public class PlayerStats : MonoBehaviour
         gameObject.GetComponent<PlayerController>().speed = original_speed;
         gameObject.GetComponent<PlayerController>().angular_speed = original_angular_speed;
         speed_increased = false;
+
+        //UI
         UI_run_debuff.SetActive(false);
         UI_run_text.SetActive(false);
 
@@ -184,6 +195,8 @@ public class PlayerStats : MonoBehaviour
         gameObject.GetComponent<PlayerController>().speed = extra_speed;
         gameObject.GetComponent<PlayerController>().angular_speed = extra_angular_speed;
         speed_increased = true;
+
+        //UI
         UI_run_debuff.SetActive(true);
         UI_run_text.SetActive(true);
 
@@ -200,6 +213,8 @@ public class PlayerStats : MonoBehaviour
     public void LoseHP()
     {
         HP--;
+
+        //UI
         if (HP == 2)
             life_saver_1.SetActive(false);
         if (HP == 1)
@@ -240,6 +255,11 @@ public class PlayerStats : MonoBehaviour
             current_stain = stain5;
         }
         stain_active = true;
+
+        //UI
+        UI_ink_debuff.SetActive(true);
+        UI_ink_text.SetActive(true);
+
         timer_stain = 0.0f;
     }
 
@@ -247,6 +267,11 @@ public class PlayerStats : MonoBehaviour
     {
         current_stain.SetActive(false);
         stain_active = false;
+
+        //UI
+        UI_ink_debuff.SetActive(false);
+        UI_ink_text.SetActive(false);
+
         timer_stain = 0.0f;
     }
 
